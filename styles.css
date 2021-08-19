@@ -112,6 +112,10 @@ main {
   .profile:nth-child(3n+2) {
     top: 70px;
   }
+
+  main {
+    row-gap: 50px;
+  }
 }
 
 @media screen and (max-width: 768px){
