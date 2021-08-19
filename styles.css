@@ -1,0 +1,173 @@
+:root {
+  --color: #000;
+
+  /* fonts */ 
+
+  --font_principal: 'Poppins', sans-serif;
+  --font_secondary: 'PT Serif', serif;
+
+  /* weight */
+
+  --w-400: 400;
+  --w-600: 600;
+  --w-700: 700;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  color: var(--color);
+  font-family: var(--font_principal);
+}
+
+.container {
+  max-width: 1440px;
+  width: 90%;
+
+  margin: 0 auto;
+  padding: 110px 240px;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin-bottom: 100px;
+}
+
+.title, .description {
+  width: 40%;
+}
+
+.title {
+  font-size: 36px;
+  font-family: var(--font_secondary);
+  font-weight: var(--w-700);
+}
+
+.description__title {
+  font-size: 18px;
+  font-weight: var(--w-600);
+
+  margin-bottom: 15px;
+
+}
+
+main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 400px 400px;
+
+  column-gap: 60px;
+  row-gap: 100px;
+
+  justify-items: start;
+
+  justify-content: center;
+  
+  margin-bottom: 100px;
+}
+
+.profile:nth-child(3n+2) {
+  position: relative;
+  top: 100px;
+}
+
+.image-box {
+  display: flex;
+
+  margin-bottom: 20px;
+}
+
+
+.image-box img {
+  width: 80%;
+  margin-right: 10px;
+}
+
+
+.profile__ocupation {
+  writing-mode: vertical-lr;
+  font-family: var(--font_secondary);
+  font-weight: var(--w-400);
+  font-size: 12px;
+
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 50px 60px 20px;
+  }
+
+  .profile:nth-child(3n+2) {
+    top: 70px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .container {
+    padding: 50px 0 ;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  .title {
+    margin-bottom: 50px;
+    width: 100%;
+  }
+
+  .description {
+    width: 80%;
+  }
+
+
+  .description__text {
+    font-size: 14px;
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    column-gap: 10px;
+    row-gap: 50px;
+  }
+
+  .profile__ocupation {
+    font-size: 10px;
+  }
+
+  .profile__name {
+    font-size: 14px;
+  }
+  .image-box {
+    margin-bottom: 10px;
+  }
+
+  .image-box img {
+    margin-right: 5px;
+  }
+
+  .profile:nth-child(3n+2) {
+    position: relative;
+    top: 0;
+  }
+
+  .profile:nth-child(even) {
+    position: relative;
+    top: 50px;
+  }
+
+}
